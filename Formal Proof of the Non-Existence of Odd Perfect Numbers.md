@@ -1,4 +1,4 @@
-# **Formal Proof of the Non-Existence of Odd Perfect Numbers**
+# **On the Incompatibility of Eulerian Form with Perfection for Odd Numbers**
 
 **Author:** Lorenzo Moreno Muñoz
 **Affiliation:** Independent Researcher, July 2025
@@ -81,6 +81,6 @@ We have shown that the Eulerian form of OPNs is incompatible with the condition 
 
 ## **References**
 1. [Euler, L. (1747). *De numeris amicabilibus*. Commentarii academiae scientiarum imperialis Petropolitanae.](https://archive.org/details/commentariiacade08impe)
-2. [Ochem, P., & Rao, M. (2012). *Odd perfect numbers are greater than $ 10^{1500} $*. Mathematics of Computation.](https://www.ams.org/journals/mcom/2012-81-279/S0025-5718-2012-02563-4/home.html)
+2. [Ochem, P., & Rao, M. (2012). *Odd perfect numbers are greater than $ 10^{1500} $*. Mathematics of Computation, 81(279), 1869-1875.](https://doi.org/10.1090/S025-5718-2012-02563-4)
 3. [Nielsen, P. P. (2023). *An upper bound for odd perfect numbers*. Integers.](https://www.researchgate.net/publication/249920203_AN_UPPER_BOUND_FOR_ODD_PERFECT_NUMBERS)
-4. [Descartes, R. (1638). Letter to Mersenne. *Œuvres de Descartes*.](https://fr.wikisource.org/wiki/%C5%92uvres_de_Descartes/%C3%89dition_Adam_et_Tannery)
+4. [Descartes, R. (1638). Letter to Mersenne. *Œuvres de Descartes*.](https://fr.wikisource.org/wiki/%C5%92uvres_de_Descartes)

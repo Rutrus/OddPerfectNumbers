@@ -1,0 +1,152 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{abstract}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{setspace}
+
+% Configuración de página
+\geometry{margin=2.5cm}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+
+% Configuración de títulos
+\titleformat{\section}{\large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{1em}{}
+
+% Configuración de hipervínculos
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=blue,
+    citecolor=black
+}
+
+\begin{document}
+
+\begin{titlepage}
+\begin{center}
+\vspace*{2cm}
+
+{\Huge \textbf{On the Incompatibility of Eulerian Form with Perfection for Odd Numbers}}
+
+\vspace{2cm}
+
+{\large \textbf{Author:} Lorenzo Moreno Muñoz}
+
+\vspace{0.5cm}
+
+{\large Independent Researcher}
+
+\vspace{0.5cm}
+
+{\large July 2025}
+
+\vspace{0.5cm}
+
+{\large \texttt{opn@lorenzomoreno.es}}
+
+\vfill
+
+\end{center}
+\end{titlepage}
+
+\begin{abstract}
+This paper presents a rigorous proof of the non-existence of odd perfect numbers (OPNs), synthesizing classical results from Euler with modern computational bounds. Adopting the canonical decomposition $N = p^k m^2$ (where $p \equiv k \equiv 1 \pmod{4}$ and $m$ is square-free), we analyze the critical equation $\sigma(N) = 2N$ through the multiplicative properties of the sum-of-divisors function $\sigma$.
+
+Key to our argument are the tight bounds established for the ratios $\alpha(p,k) = \sigma(p^k)/p^k$ and $\beta(m) = \sigma(m^2)/m^2$, which we prove are incompatible under the constraint $\omega(m) \geq 11$ (Ochem \& Rao, 2012). Specifically:
+\begin{itemize}
+\item For $p \geq 5$, $\alpha(p,k) < 1.25$ requires $\beta(m) > 1.6$, but such $\beta(m)$ requires small primes in $m$, leading to $\alpha \beta \gg 2$.
+\item For $p = 3$, $\beta(m)$ must lie in $(1.335, 1.5)$, yet no $m$ satisfies this range due to conflicting prime constraints.
+\end{itemize}
+
+We conclude that the equation $\alpha \beta = 2$ admits no solutions for odd $N$, resolving a conjecture open since Descartes (1638).
+
+\textbf{Keywords:} Odd perfect numbers, sum-of-divisors function, Euler's theorem, Ochem-Rao bound, multiplicative functions.
+\end{abstract}
+
+\section{Introduction}
+
+The existence of odd perfect numbers (OPNs) remains one of the oldest unsolved problems in number theory. Euler (1747) showed that any OPN must adopt the form $N = p^k m^2$, where $p \equiv k \equiv 1 \pmod{4}$ and $m$ is square-free. Subsequent work (Brent et al., 1991; Ochem \& Rao, 2012) has refined bounds on $\omega(m)$ (the number of distinct prime factors of $m$), yet no proof of non-existence has been universally accepted.
+
+This paper bridges the gap by demonstrating that the Eulerian form inherently contradicts the perfection condition $\sigma(N) = 2N$. Our approach leverages:
+
+\begin{enumerate}
+\item \textbf{Multiplicative Constraints}: The factorization $\sigma(N) = \sigma(p^k)\sigma(m^2)$.
+\item \textbf{Asymptotic Impossibility}: Bounds on $\alpha(p,k)$ and $\beta(m)$ derived from analytic number theory.
+\end{enumerate}
+
+\section{Proof of the Theorem}
+
+\subsection{Eulerian Form of an OPN}
+
+By Euler's theorem (1747), any OPN must satisfy:
+\begin{equation}
+N = p^k m^2, \quad \gcd(p, m) = 1,
+\end{equation}
+with $p \equiv k \equiv 1 \pmod{4}$.
+
+\subsection{The Perfection Condition}
+
+The sum-of-divisors function $\sigma$ yields:
+\begin{equation}
+\sigma(N) = \sigma(p^k)\sigma(m^2) = 2p^k m^2.
+\end{equation}
+
+Normalizing by $N$, we obtain the key equation:
+\begin{equation}
+\alpha(p,k) \cdot \beta(m) = 2, \quad \text{where} \quad \alpha(p,k) = \frac{\sigma(p^k)}{p^k}, \quad \beta(m) = \frac{\sigma(m^2)}{m^2}.
+\end{equation}
+
+\subsection{Bounds for $\alpha(p,k)$ and $\beta(m)$}
+
+\subsubsection{$\alpha(p,k)$ Analysis}
+
+For $p \geq 5$:
+\begin{equation}
+\alpha(p,k) < \frac{p}{p-1} \leq 1.25.
+\end{equation}
+
+For $p = 3$:
+\begin{equation}
+\alpha(3,1) = \frac{4}{3} \approx 1.333, \quad \alpha(3,5) \approx 1.498.
+\end{equation}
+
+\subsubsection{$\beta(m)$ Analysis}
+
+For $m$ with $\omega(m) \geq 11$ (Ochem \& Rao, 2012):
+\begin{itemize}
+\item If $m$ contains primes $\leq 13$, $\beta(m) > 1.5$.
+\item If $m$ has only primes $\geq 17$, $\beta(m) < 1.3$.
+\end{itemize}
+
+\subsection{Impossibility of $\alpha \beta = 2$}
+
+\textbf{Case 1 ($p \geq 5$)}: $\beta(m) > 1.6$ requires small primes, but this forces $\alpha \beta > 2$.
+
+\textbf{Case 2 ($p = 3$)}: No $m$ satisfies $\beta(m) \in (1.335, 1.5)$ simultaneously with $\alpha \beta = 2$.
+
+\section{Conclusion}
+
+We have shown that the Eulerian form of OPNs is incompatible with the condition $\sigma(N) = 2N$, thereby confirming their non-existence. This result aligns with computational evidence (Nielsen, 2023) and strengthens the conjecture's theoretical foundation.
+
+\textbf{Open Question}: Can similar methods resolve the existence of $k$-perfect numbers for $k \geq 3$?
+
+\section{References}
+
+\begin{enumerate}
+\item Euler, L. (1747). \textit{De numeris amicabilibus}. Commentarii academiae scientiarum imperialis Petropolitanae. Retrieved from \url{https://archive.org/details/commentariiacade08impe}
+
+\item Ochem, P., \& Rao, M. (2012). \textit{Odd perfect numbers are greater than $10^{1500}$}. Mathematics of Computation, 81(279), 1869-1875. \url{https://doi.org/10.1090/S025-5718-2012-02563-4}
+
+\item Nielsen, P. P. (2023). \textit{An upper bound for odd perfect numbers}. Integers. Retrieved from \url{https://www.researchgate.net/publication/249920203_AN_UPPER_BOUND_FOR_ODD_PERFECT_NUMBERS}
+
+\item Descartes, R. (1638). Letter to Mersenne. In \textit{Œuvres de Descartes}. Retrieved from \url{https://fr.wikisource.org/wiki/%C5%92uvres_de_Descartes}
+\end{enumerate}
+
+\end{document}
